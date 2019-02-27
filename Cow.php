@@ -12,7 +12,7 @@ class Cow extends AbstractAnimal
 
 	public function getProduct()
 	{
-		$product = new Product( $this->nameProduct, $this->unitProduct, $this->generateAmountProduct() );
+		$product = new Product( $this, $this->nameProduct, $this->unitProduct, $this->generateAmountProduct() );
 
 		return $product;
 	}

@@ -5,17 +5,21 @@ include 'AnimalAgregator.php';
 include 'Product.php';
 include 'Chicken.php';
 include 'Cow.php';
+include 'Farm.php';
+include 'Statistics.php';
 
-$animalAgregator = new AnimalAgregator();
+$farm = new Farm();
 
-$animalAgregator->createAnimal('Cow');
-$animalAgregator->createAnimal('Chicken');
+//Колчество сборов
+$farm->harvestProduct();
+$farm->harvestProduct();
+$farm->harvestProduct();
+$farm->harvestProduct();
 
-var_dump($animalAgregator->animals);
-
-// $chicken = new Chicken();
-// $cow = new Cow();
-
-// var_dump($chicken, $cow);
-// var_dump( $cow->getProduct() );
-// var_dump( $chicken->getProduct() );
+$farm->getStatistics()->printStatisticsHarvest();
+echo PHP_EOL;
+$farm->getStatistics()->printFullRating();
+echo PHP_EOL;
+$farm->getStatistics()->printTopRating();
+echo PHP_EOL;
+$farm->getStatistics()->printBottomRating();

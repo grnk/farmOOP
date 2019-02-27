@@ -4,7 +4,8 @@ abstract class AbstractAnimal
 	public $idAnimal;
 	public $typeAnimal;
 
-	public function __construct() {
+	public function __construct()
+	{
 		$this->idAnimal = $this->generateId();
 	}
 

@@ -1,8 +1,14 @@
 <?php
 class AnimalAgregator
 {
-	public $animals = [];
+	private $animals = [];
 
+	public function getAnimals()
+	{
+		return $this->animals;
+	}
+
+	//Создаём животное
 	public function createAnimal($typeAnimal)
 	{
 		if($typeAnimal === 'Cow') {
@@ -16,7 +22,7 @@ class AnimalAgregator
 		$this->addAnimal($animal);
 	}
 
-
+	//Добавляем животное в общий массив
 	private function addAnimal($animal)
 	{
 		if( !empty($animal) ) {
